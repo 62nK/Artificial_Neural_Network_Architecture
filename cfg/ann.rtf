@@ -1,0 +1,112 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 architecture: \{\
+
+Map<String, Map> ann = new HashMap<>();
+        {
+            Map<String, Map> layerMap = new HashMap<>();
+            // Input Layer
+            Map<String, Map> l0 = new HashMap<>();
+            Map<String, Double> l0n0 = new HashMap<>(), l0n1 = new HashMap<>(), l0n2 = new HashMap<>();
+            l0n0.put("sy0", 1.0);
+            l0.put("neuron0", l0n0);
+            l0n1.put("sy0", 1.0);
+            l0.put("neuron1", l0n1);
+            l0n2.put("sy0", 1.0);
+            l0.put("neuron2", l0n2);
+            layerMap.put("layer0", l0);
+
+            // Hidden Layer
+            Map<String, Map> l1 = new HashMap<>();
+            Map<String, Double> l1n0 = new HashMap<>(), l1n1 = new HashMap<>();
+            l1n0.put("sy0", 0.2);
+            l1n0.put("sy1", -0.1);
+            l1n0.put("sy2", 0.4);
+            l1.put("neuron0", l1n0);
+            l1n1.put("sy0", 0.7);
+            l1n1.put("sy1", -1.2);
+            l1n1.put("sy2", 1.2);
+            l1.put("neuron1", l1n1);
+            layerMap.put("layer1", l1);
+
+            // Output Layer
+            Map<String, Map> l2 = new HashMap<>();
+            Map<String, Double> l2n0 = new HashMap<>(), l2n1 = new HashMap<>();
+            l2n0.put("sy0", 1.1);
+            l2n0.put("sy1", 0.1);
+            l2.put("neuron0", l2n0);
+            l2n1.put("sy0", 3.1);
+            l2n1.put("sy1", 1.17);
+            l2.put("neuron1", l2n1);
+            layerMap.put("layer2", l2);
+
+            ann.put("layerMap", layerMap);
+
+            Map<String, Integer> info = new HashMap<>();
+            info.put("layerCount", 3);
+            info.put("inNeuronCount", 3);
+            ;
+            info.put("hiddenNeuronCount", 2);
+            ;
+            info.put("outNeuronCount", 2);
+            ann.put("info", info);
+        }
+
+layerMap=\{\
+	layer0=\{\
+		neuron0=\{\
+			sy0=1.0\
+		\}, \
+		neuron2=\{\
+			sy0=1.0\
+		\}, \
+		neuron1=\{\
+			sy0=1.0\
+		\}, \
+		neuron3=\{\
+			sy0=1.0\
+		\}\
+	\}, \
+	layer1=\{\
+		neuron0=\{\
+			sy1=0.9941957455496904, \
+			sy0=0.1985925938969778, \
+			sy3=0.22763090050041046, \
+			sy2=0.6934408087939931\
+		\},\
+		neuron2=\{\
+			sy1=0.5790408161978093, \
+			sy0=0.9884695581984059, \
+			sy3=0.5506300840316853, \
+			sy2=0.20100386130105652\}, \
+		neuron1=\{sy1=0.14037531165549322, \
+			sy0=0.19566275917043408, \
+			sy3=0.13480892664231092, \
+			sy2=0.2701564761004934\
+		\}\
+	\}, \
+	layer2=\{\
+		neuron0=\{\
+			sy1=0.6001997670363478, \
+			sy0=0.9808621941547863, \
+			sy2=0.4264635535937856\}, \
+		neuron1=\{\
+			sy1=0.6055770189029687, \
+			sy0=0.7267946753736454, \
+			sy2=0.8278525241531897\
+		\}\
+	\}\
+\}, \
+info=\{\
+	inNeuronCount=4, \
+	outNeuronCount=2, \
+	layerCount=3, \
+	hiddenNeuronCount=3\
+	\}\
+\}\
+}
